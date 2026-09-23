@@ -87,6 +87,7 @@ struct proc {
   void *chan;           // If non-zero, sleeping on chan
   int killed;           // If non-zero, have been killed
   int xstate;           // Exit status to be returned to parent's wait
+  uint cputime;                // Timer ticks charged to this process.
   int pid;              // Process ID
 
   // wait_lock must be held when using this:
